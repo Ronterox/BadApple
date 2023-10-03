@@ -16,18 +16,23 @@ void clean() {
 }
 
 int main() {
+    // TODO: this path also parameter
     const char folderpath[] = "frames-ascii";
-    system("mpv badapple.mp4 &");
+
+    // TODO: Download file, still thinking if py or full c++
+    system("mpv --loop=no badapple.mp4 &");
 
     std::vector<fs::path> files;
     std::copy(fs::directory_iterator(folderpath), fs::directory_iterator(), std::back_inserter(files));
     std::sort(files.begin(), files.end());
 
+    // TODO: files ascii generation, still thinking if py or full c++
     for (const std::string& filename : files) {
 	std::ifstream frame(filename);
 	while (frame) std::cout << (char)frame.get();
 
-	std::this_thread::sleep_for(std::chrono::milliseconds(33)); // 33 ms
+	// TODO: Parameter ms for other machines
+	std::this_thread::sleep_for(std::chrono::milliseconds(33));
 	clean();
     }
     return 0;
