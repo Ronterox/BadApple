@@ -1,0 +1,8 @@
+Image to ASCII in c++:
+
+https://stackoverflow.com/questions/32987103/image-to-ascii-art-conversion
+
+Youtube possible download:
+(The library I have there from the guy)
+
+https://github.com/Tarferi/youtubedownloader

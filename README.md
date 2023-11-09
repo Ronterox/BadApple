@@ -4,7 +4,7 @@
 
 > a.out is for linux, .exe for windows
 
-```
+```bash
 g++ main.cpp && ./a.out
 ``` 
 
@@ -12,6 +12,6 @@ g++ main.cpp && ./a.out
 
 > System call to mpv, so have mpv. or you can change this to vlc
 
-``` 
+```cpp
 system("mpv --loop=no badapple.mp4 &");
 ``` 

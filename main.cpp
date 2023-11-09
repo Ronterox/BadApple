@@ -28,12 +28,12 @@ int main() {
 
     // TODO: files ascii generation, still thinking if py or full c++
     for (const std::string& filename : files) {
-	std::ifstream frame(filename);
-	while (frame) std::cout << (char)frame.get();
+        std::ifstream frame(filename);
+        while (frame) std::cout << (char)frame.get();
 
-	// TODO: Parameter ms for other machines
-	std::this_thread::sleep_for(std::chrono::milliseconds(33));
-	clean();
+        // TODO: Parameter ms for other machines
+        std::this_thread::sleep_for(std::chrono::milliseconds(33));
+        clean();
     }
     return 0;
 }
